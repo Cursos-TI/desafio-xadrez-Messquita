@@ -1,32 +1,59 @@
 #include <stdio.h>
+//Utilizando recursividade
+void movimentaPecaTorre (int numero1){
+    if (numero1 > 0 )
+    {   movimentaPecaTorre ( numero1 - 1);
+        printf("%d casa para direita! \n" ,numero1);
+    }}
+
+void movimentaPecaBispo (int numero2){
+    if (numero2 > 0 )
+    {   movimentaPecaBispo ( numero2 - 1);
+        printf("%d casa para Cima, Direita! \n" ,numero2);
+    }}
+
+void movimentaPecaRainha (int numero3){
+    if (numero3 > 0 )
+    {   movimentaPecaRainha ( numero3 - 1);
+        printf("%d casa para Cima, Direita! \n" ,numero3);
+    }}
+
+
+
+
 int main(){
-    
-    int torre, Bispo = 1, Rainha = 1, i = 1 , j = 0;
-    char T [6] = "Torre", B [6] = "Bispo", R [7]= "Rainha", C [7] = "Cavalo";
+//Utilizando recursividade
+int torre = 5;  
+printf("Movimentação (Torre)!\n");
+movimentaPecaTorre(torre);
 
-    for ( torre = 1; torre <= 5; torre++)
-    {   printf("%s: Direita!\n", T);   }
-    
-    while (Bispo <= 5)
-    {   
-        printf("%s: Cima, direita!\n", B);
-        Bispo++;    }
-    
-    do
-    {   printf("%s: Esquerda!\n" , R);
-        Rainha++;
-        
-    } while (Rainha <= 7);
-    printf("\n"); //Utilizado para pular uma linha
+int Bispo = 5;
+printf("Movimentação (Bispo)!\n");
+movimentaPecaBispo(Bispo);
 
-    for (i = 1; i <= 2; i++)
-    {   printf("%s: Baixo!\n", C);
-        for (j = 1; j <= 1 ; j++)
-        {   printf("%s: Esquerda!\n", C);
-            
-        }
-        
+int Rainha = 8;
+printf("Movimentação (Rainha)!\n");
+movimentaPecaRainha(Rainha);
+
+
+// Declarar a direção do movimento cavalo
+int casas_vertical = 2;
+int casas_horizontal = 1;
+
+    // Logica looping
+        printf("Movimento (Cavalo)\n");
+        for ( int i = 1; i <= casas_horizontal; i++)
+        printf("Direita!\n");
+    {   for (int j = 1; j <= casas_vertical; j++)
+    {   printf("Cima!\n");
+        /* code */
     }
+    
+        /* code */
+    }
+
+}
+
     
 
 
